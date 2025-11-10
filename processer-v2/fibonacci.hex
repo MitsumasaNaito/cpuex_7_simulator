@@ -1,0 +1,14 @@
+20080028  # addi $t0, $zero, 40
+20090000  # addi $t1, $zero, 0
+200A0001  # addi $t2, $zero, 1
+200B0002  # addi $t3, $zero, 2
+010B082A  # loop: slt $at, $t0, $t3
+14200006  # bne $at, $zero, end
+012A6020  # add $t4, $t1, $t2
+01404820  # add $t1, $t2, $zero (move $t1, $t2)
+01805020  # add $t2, $t4, $zero (move $t2, $t4)
+216B0001  # addi $t3, $t3, 1
+08100004  # j loop (0x0040001Cへ)
+01402020  # end: add $a0, $t2, $zero (move $a0, $t2)
+2002000A  # addi $v0, $zero, 10
+0000000C  # syscall
