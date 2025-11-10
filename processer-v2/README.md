@@ -161,9 +161,12 @@ MIT License
 
 # main.rsにおける処理の流れ
 
+```mermaid
+
 graph TD
     A[処理スタート] --> B{コマンドライン引数を解析する};
     B --> C{MipsSimulatorインスタンスを作成};
     C --> D{プログラムファイルを読み込む};
     C --> E{シミュレータを実行};
 
+```
